@@ -1,0 +1,146 @@
+body{
+    background-color: rgb(52, 127, 246);
+}
+
+.App{
+    
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+
+.card{
+    background-color: white;
+    text-align: center;
+   margin: 20px;
+   width: 25%;
+    height: 560px;
+    border: none;
+    border-radius: 4%;
+    transition:  0.3s;
+
+}
+.card:hover{
+    transform: translate(0,-10px);
+}
+
+.cost{
+    font-size: 40px;
+}
+
+b{
+    opacity: 50%;
+}
+span{
+    font-size: 15px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    font-size: 18px;
+    margin-left: 15px;
+}
+
+.letters{
+   
+   margin: 10px;
+}
+
+hr{
+    width: 90%;
+}
+
+button{
+    font-size: 12px;letter-spacing: 2px;
+    font-weight: bold;
+    color: white;
+    border: none ;
+    background-color: rgb(36, 187, 237);
+    width: 95%;
+    height: 50px;
+   margin-top: 20px;
+    border-radius: 50px;
+}
+
+button:hover{
+    background-color: rgb(20, 147, 189);
+}
+
+.bold{
+    font-weight: bold;
+}
+.dull{
+    opacity: 50%;
+}
+
+@media (max-width: 576px) { 
+    .App{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .card{
+            width: 80%;
+        }
+     } 
+
+ @media (min-width: 576px) { 
+.App{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 90%;
+    }
+ } 
+
+/*  Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .App{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 80%;
+    }
+ }
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+    .App{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 80%;
+    }
+ }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .App{
+        display: flex;
+        flex-direction: row;
+        margin-top: 40px;
+    }
+.card{
+    width: 100%;
+    transition:  0.3s;
+}
+
+
+
+.card:hover{
+    transform: translate(0,-10px);
+}
+  }
