@@ -83,16 +83,16 @@ function Cards({prod, idx, setCount, count}){
           <Card.Text>{prod.rating} ♥</Card.Text>
         {/* conditional rendering */}
 
-         {!show ? <Button
+         {/* {!show ? <Button
            variant="primary"
            onClick={addToCart}
-           >Add cart</Button> : ""}
+           >Add cart</Button> : ""}  */}
 
 
-           {show ? <Button 
+            {/* {show ? <Button 
            variant="danger"
            onClick={removeFromCart}
-           >remove cart</Button> : ""}
+           >remove cart</Button> : ""} */}
 
         </Card.Body>
       </Card>
