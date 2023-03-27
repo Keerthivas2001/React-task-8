@@ -1,0 +1,39 @@
+export const data1=[
+    {
+        id:"100",
+        name:"Jhonny",
+        email:"jhonny@gmail.com",
+        experience:6,
+    },
+    {
+        id:"101",
+        name:"Dana",
+        email:"dana@gmail.com",
+        experience:4,
+    },
+    {
+        id:"102",
+        name:"Godwill",
+        email:"godwill@gmail.com",
+        experience:4,
+    },
+    {
+        id:"103",
+        name:"Penny",
+        email:"penny@gmail.com",
+        experience:2,
+    },
+
+    {
+        id:"104",
+        name:"Mathew",
+        email:"mathew@gmail.com",
+        experience:7,
+    },
+    {
+        id:"105",
+        name:"Candice",
+        email:"candice@gmail.com",
+        experience:3,
+    },
+]

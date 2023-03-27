@@ -1,35 +1,36 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import BaseApp3 from "../Core/Base3";
+import BaseApp4 from "../Core/Base4";
 
-export  function AddUser({user,setUser}){
+export  function AddUser1({user1,setUser1}){
     const history=useHistory();
     const [name,setName]=useState("");
     const[id,setId]=useState("");
     const[email,setEmail]=useState("");
     const[experience,setExperience]=useState();
-    const[batch,setBatch]=useState("")
+   
 
 const addNewUser=()=>{
-    const newUser={
+    const newUser1={
         id,
         name,
         email,
         experience,
-        batch
+      
     }
     
-    setUser([...user,newUser]);
-    history.push("/student/details")
+    setUser1([...user1,newUser1]);
+    history.push("/teacher/details")
     setId("");
     setName("");
     setEmail("");
     setExperience("");
-    setBatch("");
+    
+   
 }
 
     return(
-        <BaseApp3
+        <BaseApp4
         title={"Add a new User"}
         >
         
@@ -46,11 +47,7 @@ const addNewUser=()=>{
           type="text"
           onChange={(event)=>setName(event.target.value)}
           />
-          <input placeholder="batch"
-          value={batch}
-          type="text"
-          onChange={(event)=>setBatch(event.target.value)}
-          />
+         
           
           <input placeholder="email" 
           value={email}
@@ -69,7 +66,7 @@ const addNewUser=()=>{
 
     
   </div>
-        </BaseApp3>
+        </BaseApp4>
        
     )
 }

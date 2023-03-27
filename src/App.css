@@ -44,9 +44,10 @@ color: white;
 }
 
 .user-card{
-  background-color:grey;
+  background-color:gold;
   border-radius: 5px;
 width: 250px;height: 250px;
+color: #2A2E34;
 }
 
 .user-content{
@@ -89,4 +90,21 @@ gap: 1rem;
   gap: 1rem;
   margin-top: 50px;
   flex-wrap: wrap;
+}
+
+
+.card{
+ margin-top: 30px;
+}
+
+.card-btn{
+  font-size: 20px;
+  width: 50%;height: 50px;
+  border: none;border-radius: 8px;
+}
+
+.card-btn:hover{
+  width: 55%;height: 55px;
+  color: gold;
+  background-color:navy;
 }

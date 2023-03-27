@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import BaseApp3 from "../Core/Base3";
+import BaseApp4 from "../Core/Base4";
 
-export  function UserDetails({user}){
+export  function TeacherDetails({user1}){
     const{id}=useParams();
-   const person=user[id]
+   const person=user1[id]
     return(
-    <BaseApp3
+    <BaseApp4
     title={"User details"}
     >
      <div className="user-content"> 
@@ -14,12 +14,11 @@ export  function UserDetails({user}){
           
             <div   className="user-card">
                 <h1>{person.name}</h1>
-                <p>Batch:{person.batch}</p>
                 <p>Email:{person.email}</p>
                 <p>Experience:{person.experience}</p>
                </div>
             </div>
-    </BaseApp3>
+    </BaseApp4>
 
 
     )

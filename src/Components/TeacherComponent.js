@@ -1,35 +1,34 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import BaseApp from "../Core/Base";
-import { data } from "../Data/data.js";
-import { AddUser } from "./AddUser";
 
-export default function UserComponent({user,setUser}){
+import BaseApp2 from "../Core/Base2";
+
+
+export default function TeacherComponent({user1,setUser1}){
     const history=useHistory();
 
     const deleteUser=(idx)=>{
-        const alterList=user.filter((per,id)=>per.id!=idx)
-  setUser(alterList);
+        const alterList=user1.filter((per,id)=>per.id!=idx)
+  setUser1(alterList);
     }
 
     return(
     
-    <BaseApp
+    <BaseApp2
     
         title="User Details">  
           <div className="user-content"> 
           
-          {user.map((person,idx)=>(
+          {user1.map((person,idx)=>(
             <div key={idx} className="user-card">
                 <h1>{person.name}</h1>
-                <p>Batch:{person.batch}</p>
                 <p>Email:{person.email}</p>
                 <p>Experience:{person.experience}</p>
                 <div className="btn-grp">
                     <button className="btn edit-btn"
-                     onClick={()=>history.push(`/edit/${person.id}`)}>Edit</button>
+                     onClick={()=>history.push(`/edits/${person.id}`)}>Edit</button>
                     <button className="btn view-btn" 
-                       onClick={()=>history.push(`/user/${idx}`)}>View</button>
+                       onClick={()=>history.push(`/users/${idx}`)}>View</button>
                     <button className="btn del-btn"
                     onClick={()=>deleteUser(person.id)}>Delete</button>
                     
@@ -37,7 +36,7 @@ export default function UserComponent({user,setUser}){
             </div>
           ))}
           </div>
-       </BaseApp>
+       </BaseApp2>
      
 
     )

@@ -1,48 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { useHistory, useParams } from "react-router-dom";
-import BaseApp3 from "../Core/Base3";
+import BaseApp4 from "../Core/Base4";
 
-const EditUser=({user,setUser})=>{
+const EditTeacher=({user1,setUser1})=>{
     const history=useHistory();
     const [name,setName]=useState("");
     const[idx,setIdx]=useState("");
     const[email,setEmail]=useState("");
     const[experience,setExperience]=useState();
-    const[batch,setBatch]=useState("")
 
     const {id}=useParams();
    
-    const selectUser=user.find((per)=>per.id===id)
+    const selectUser=user1.find((per)=>per.id===id)
 
     useEffect(()=>{
         setIdx(selectUser.id)
         setName(selectUser.name)
-        setBatch(selectUser.batch)
         setEmail(selectUser.email)
         setExperience(selectUser.experience)
     },[]);
 
 
 const updateUser=()=>{
-    const editIndex=user.findIndex(per=>per.id===id);
+    const editIndex=user1.findIndex(per=>per.id===id);
     
     const editedData={ 
         id:idx,
         name,
-        batch,
-
         email,
         experience
     }
-user[editIndex]=editedData;
-setUser([...user])
-history.push("/student/details")
+user1[editIndex]=editedData;
+setUser1([...user1])
+history.push("/teacher/details")
 
-console.log(user);
+console.log(user1);
 }
 
     return(
-        <BaseApp3
+        <BaseApp4
         title={"Edit the user details"}
         >
         
@@ -59,12 +55,7 @@ console.log(user);
           type="text"
           onChange={(event)=>setName(event.target.value)}
           />
-          <input placeholder="batch"
-          value={batch}
-          type="text"
-          onChange={(event)=>setBatch(event.target.value)}
-          />
-          
+      
           <input placeholder="email" 
           value={email}
           type="text"
@@ -82,9 +73,9 @@ console.log(user);
 
     
   </div>
-        </BaseApp3>
+        </BaseApp4>
     )
 }
 
 
-export default EditUser
+export default EditTeacher
